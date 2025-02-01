@@ -1,3 +1,5 @@
+package lab4;
+
 /**
  * Contains one method called display() that
  * prints info about the object.

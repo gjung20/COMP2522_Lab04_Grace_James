@@ -1,3 +1,5 @@
+package lab4;
+
 /**
  * Represents a name object with a first and last name.
  * Both first and last names cannot be null, blank, and must be less than 50 characters.

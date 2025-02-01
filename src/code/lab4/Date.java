@@ -1,3 +1,5 @@
+package lab4;
+
 /**
  * Represents a Date object with year, month, and day fields.
  *
