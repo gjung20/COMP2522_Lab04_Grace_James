@@ -21,6 +21,7 @@ package lab4;
  * @version 1.0
  */
 public class Date
+    implements Printable
 {
 
     // The earliest year a bank client can input as their birth year.
@@ -355,5 +356,20 @@ public class Date
                 (year % FOUR_HUNDRED == CHECK_IF_EVEN);
 
         return isLeapYear;
+    }
+
+    @Override
+    public void display() {
+        StringBuilder sbDate;
+        sbDate = new StringBuilder();
+
+        sbDate.append("Year: ");
+        sbDate.append(year);
+        sbDate.append("\nMonth: ");
+        sbDate.append(month);
+        sbDate.append("\nDay: ");
+        sbDate.append(day);
+
+        System.out.println(sbDate);
     }
 }
