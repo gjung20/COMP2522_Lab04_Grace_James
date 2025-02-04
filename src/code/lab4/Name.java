@@ -53,7 +53,8 @@ public class Name implements Printable
 
     /**
      * Getter for first name.
-     * @return
+     *
+     * @return the person's first name as a String
      */
     public final String getFirstName()
     {
@@ -62,7 +63,8 @@ public class Name implements Printable
 
     /**
      * Getter for last name.
-     * @return
+     *
+     * @return the person's last name as a String
      */
     public final String getLastName()
     {
@@ -71,7 +73,8 @@ public class Name implements Printable
 
     /**
      * Getter for full name.
-     * @return
+     *
+     * @return the person's full name as a String
      */
     public final String getFullName()
     {

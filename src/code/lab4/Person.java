@@ -166,7 +166,7 @@ public class Person
     }
 
     /**
-     * Prints the name/ title backwards
+     * Prints the name title backwards
      */
     @Override
     public void backwards() {
