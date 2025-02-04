@@ -121,7 +121,6 @@ public class Book
     }
 
     // IMPLEMENTED METHODS
-
     /**
      * Overrides the compareTo() method from {@link Comparable}.
      * Older books are larger.
