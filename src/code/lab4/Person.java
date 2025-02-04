@@ -8,6 +8,8 @@ package lab4;
  *
  * @author Grace Jung
  * @author James Smith
+ * @author Andrew Hwang
+ * @version 1.0
  */
 public class Person
         implements  Comparable<Person>,

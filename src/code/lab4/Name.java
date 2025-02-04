@@ -4,8 +4,9 @@ package lab4;
  * Represents a name object with a first and last name.
  * Both first and last names cannot be null, blank, and must be less than 50 characters.
  *
- * @author grace
- * @author james
+ * @author Grace Jung
+ * @author James Smith
+ * @author Andrew Hwang
  * @version 1.0
  */
 public class Name implements Printable
