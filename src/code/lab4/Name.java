@@ -1,8 +1,10 @@
 package lab4;
 
 /**
- * Represents a name object with a first and last name.
- * Both first and last names cannot be null, blank, and must be less than 50 characters.
+ * Represents a name object with a first and last name that implements {@link Printable}.
+ * A name has a:
+ * <li>first name: String, not null, not blank, less than 50 characters.</li>
+ * <li>last name: String, not null, not blank, less than 50 characters.</li>
  *
  * @author Grace Jung
  * @author James Smith
@@ -50,7 +52,6 @@ public class Name implements Printable
     }
 
     // ACCESSORS
-
     /**
      * Getter for first name.
      *

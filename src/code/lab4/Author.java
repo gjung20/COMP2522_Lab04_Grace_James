@@ -2,6 +2,13 @@ package lab4;
 
 /**
  * TODO Check if display() will result in null pointer due to returning potentially non-existent dateOfDeath.
+ * Represents an Author object that extends {@link Person}.
+ * Implements {@link Printable}.
+ * An author has a:
+ * <li>date of birth</li>
+ * <li>date of death</li>
+ * <li>name</li>
+ * <li>genre as a String.</li>
  *
  * @author Grace Jung
  * @author James Smith

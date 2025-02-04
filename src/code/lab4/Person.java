@@ -4,7 +4,12 @@ package lab4;
  * TODO write functionality for Inherited Interface Methods (i think it's completed)
  * TODO write JavaDocs for Constructors, Accessors (completed)
  *
- * Creates a person object.
+ * Creates a person object that implements {@link Comparable}, {@link Printable},
+ * and {@link Reversible}.
+ * A person has a:
+ * <li>date of birth</li>
+ * <li>date of death</li>
+ * <li>name.</li>
  *
  * @author Grace Jung
  * @author James Smith
