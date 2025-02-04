@@ -127,7 +127,7 @@ public class Book
      * Older books are larger.
      *
      * @param o the object to be compared.
-     * @return
+     * @return the object o as an integer.
      */
     @Override
     public int compareTo(Book o)

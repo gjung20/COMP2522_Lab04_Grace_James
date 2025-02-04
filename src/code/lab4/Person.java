@@ -1,8 +1,8 @@
 package lab4;
 
 /**
- * TODO write functionality for Inherited Interface Methods
- * TODO write JavaDocs for Constructors, Accessors
+ * TODO write functionality for Inherited Interface Methods (i think it's completed)
+ * TODO write JavaDocs for Constructors, Accessors (completed)
  *
  * Creates a person object.
  *
@@ -22,6 +22,13 @@ public class Person
     private Name name;
 
     // CONSTRUCTORS
+    /**
+     * Constructs a Person object, if the person is dead.
+     *
+     * @param dateOfBirth represents the person's date of birth
+     * @param dateOfDeath represents the person's date of death
+     * @param name represents the person's name
+     */
     public Person(final Date dateOfBirth,
                   final Date dateOfDeath,
                   final Name name) {
@@ -31,6 +38,12 @@ public class Person
         this.name = name;
     }
 
+    /**
+     * Constructs a Person object, if the person is alive.
+     *
+     * @param dateOfBirth represents the person's date of birth
+     * @param name represents the person's name
+     */
     public Person(final Date dateOfBirth,
                   final Name name) {
         this.dateOfBirth = dateOfBirth;
@@ -38,18 +51,39 @@ public class Person
     }
 
     // ACCESSORS
+
+    /**
+     * Getter for name variable.
+     *
+     * @return the person's name as a Name object.
+     */
     public final Name getName() {
         return name;
     }
 
+    /**
+     * Getter for date of birth variable.
+     *
+     * @return the person's date of birth as a Date object.
+     */
     public final Date getDateOfBirth() {
         return this.dateOfBirth;
     }
 
+    /**
+     * Getter for date of death variable.
+     *
+     * @return the person's date of death as a Date object.
+     */
     public final Date getDateOfDeath() {
         return this.dateOfDeath;
     }
 
+    /**
+     * Getter for name variable which includes the whole name.
+     *
+     * @return the person's full name as a String.
+     */
     public final String getFullName() {
         return this.name.getFullName();
     }
@@ -107,7 +141,7 @@ public class Person
     }
 
     /**
-     * Prints every instance variable (including those of parent classes, in a sentence.
+     * Prints every instance variable (including those of parent classes), in a sentence.
      */
     @Override
     public void display() {

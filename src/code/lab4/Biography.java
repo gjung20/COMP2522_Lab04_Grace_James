@@ -73,8 +73,8 @@ public class Biography
      * Checks superclass (Book)'s author, pulls the Name object, and pulls full name as a String.
      * Does the same for incoming object, compares the two w/ equals() on the two Strings.
      *
-     * @param o
-     * @return
+     * @param o the object compared and evaluated to be true or false
+     * @return the object o as a boolean
      */
     @Override
     public boolean equals(final Object o){
