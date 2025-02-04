@@ -1,8 +1,13 @@
 package lab4;
 
 /**
- * TODO implement Display() functionality
- * TODO JavaDoc for Constructor, Accessors, Validation Methods (but not JavaDoc), equals()
+ * Represents a Biography object that extends {@link Book}.
+ * Implements {@link Printable}.
+ * A biography has a:
+ * <li>title</li>
+ * <li>year published</li>
+ * <li>author</li>
+ * <li>person as a subject.</li>
  *
  * @author Grace Jung
  * @author James Smith
@@ -16,6 +21,15 @@ public class Biography
     private Person subject;
 
     // CONSTRUCTORS
+    /**
+     * Constructs a biography object with a specified title,
+     * publication year, author, and subject.
+     *
+     * @param title represents the autobiography's title
+     * @param yearPublished represents the year the autobiography was published
+     * @param author represents the author of the biography
+     * @param subject represents the subject of the biography
+     */
     public Biography(final String title,
                      final int yearPublished,
                      final Author author,
@@ -33,22 +47,30 @@ public class Biography
     }
 
     // VALIDATION METHODS
+    /*
+    Validates the subject and makes sure it's not null.
+     */
     private final boolean validateSubject(final Person subject)
     {
-        if(subject == null){
-            return false;
-        } else {
-            return true;
-        }
+        boolean isSubjectValid;
+        isSubjectValid = subject != null;
+        return isSubjectValid;
     }
 
     // ACCESSORS
+    /*
+    Getter for the autobiography's subject.
+     */
     protected final Person getSubject(){
         return subject;
     }
 
     // OTHER METHODS
     /**
+     * Overrides the equals() method in the {@link Object} class.
+     * Two biographies are equal if they are about the same subject.
+     * Checks superclass (Book)'s author, pulls the Name object, and pulls full name as a String.
+     * Does the same for incoming object, compares the two w/ equals() on the two Strings.
      *
      * @param o
      * @return
@@ -71,9 +93,20 @@ public class Biography
         }
     }
 
-
+    /**
+     * Overrides the display method in interface {@link Printable}.
+     * Prints the book details and subject as a string.
+     */
     @Override
-    public void display() {
+    public void display()
+    {
+        StringBuilder sbBiographyDetails;
+        sbBiographyDetails = new StringBuilder();
+
+        super.display();
+        sbBiographyDetails.append("Subject: ");
+        sbBiographyDetails.append(subject.getFullName());
+        System.out.println(sbBiographyDetails.toString());
 
     }
 }

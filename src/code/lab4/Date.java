@@ -358,6 +358,10 @@ public class Date
         return isLeapYear;
     }
 
+    /**
+     * Overrides the display method in interface {@link Printable}.
+     * Prints the date as a string.
+     */
     @Override
     public void display() {
         StringBuilder sbDate;

@@ -1,8 +1,12 @@
 package lab4;
 
 /**
- * TODO Implement Interface Methods, Write Javadoc for Constructors, Write Class Description
- *
+ * Represents a Book object that implements {@link Comparable},
+ * {@link Printable}, and {@link Reversible}.
+ * A book has a:
+ * <li>title: String, not null, not blank, less than 100 characters.</li>
+ * <li>publication year: int, must be between year 1 and the current year.</li>
+ * <li>author: Author, not null.</li>
  *
  * @author Grace Jung
  * @author James Smith
@@ -22,6 +26,13 @@ public class Book
     public static final int CURRENT_YEAR = 2025;
 
     // CONSTRUCTORS
+    /**
+     * Constructs a Book object.
+     *
+     * @param title represents the books title
+     * @param yearPublished represents the year of publication
+     * @param author represents the author of book
+     */
     public Book(final String title,
                 final int yearPublished,
                 final Author author)
@@ -64,11 +75,9 @@ public class Book
      */
     private final boolean validateAuthor(final Author author)
     {
-        if(author == null){
-            return false;
-        } else {
-            return true;
-        }
+        boolean isAuthorValid;
+        isAuthorValid = author != null;
+        return isAuthorValid;
     }
 
     /*
@@ -80,12 +89,10 @@ public class Book
      */
     private final boolean validateYearPublished(final int yearPublished)
     {
-        if(yearPublished < 1 ||
-        yearPublished > CURRENT_YEAR){
-            return false;
-        } else {
-            return true;
-        }
+        boolean isYearValid;
+        isYearValid = yearPublished >= 1 &&
+                yearPublished <= CURRENT_YEAR;
+        return isYearValid;
     }
 
     // ACCESSORS
@@ -115,21 +122,55 @@ public class Book
 
     // IMPLEMENTED METHODS
 
-    // Older Books are larger
+    /**
+     * Overrides the compareTo() method from {@link Comparable}.
+     * Older books are larger.
+     *
+     * @param o the object to be compared.
+     * @return
+     */
     @Override
-    public int compareTo(Book o) {
-        return 0;
+    public int compareTo(Book o)
+    {
+        return Integer.compare(this.yearPublished, o.yearPublished);
     }
 
-    // Prints title, year, author
+    /**
+     * Prints the title, year, and author.
+     */
     @Override
-    public void display() {
+    public void display()
+    {
+        StringBuilder sbBookDetails;
+        sbBookDetails = new StringBuilder();
+        sbBookDetails.append("Title:");
+        sbBookDetails.append(title);
+        sbBookDetails.append('\n');
+        sbBookDetails.append("Year Published: ");
+        sbBookDetails.append(yearPublished);
+        sbBookDetails.append('\n');
+        sbBookDetails.append("Author: ");
+        sbBookDetails.append(author);
+        System.out.println(sbBookDetails.toString());
 
     }
 
-    // Prints the title backwards
+    /**
+     * Prints the title backwards as a String.
+     */
     @Override
-    public void backwards() {
+    public void backwards()
+    {
+        StringBuilder reversedTitle;
+        char currentCharacter;
 
+        reversedTitle = new StringBuilder();
+
+        for(int i = 0 ; i < getTitle().length() ; i++)
+        {
+            currentCharacter = getTitle().charAt(i);
+            reversedTitle.insert(0, currentCharacter);
+        }
+        System.out.println(reversedTitle.toString());
     }
 }

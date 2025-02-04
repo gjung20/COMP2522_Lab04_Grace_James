@@ -7,5 +7,10 @@ package lab4;
  * @author James Smith
  * @version 1.0
  */
-public class Main {
+public class Main
+{
+    public static void main(final String[] args)
+    {
+
+    }
 }

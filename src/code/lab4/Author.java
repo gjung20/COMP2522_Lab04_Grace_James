@@ -2,8 +2,6 @@ package lab4;
 
 /**
  * TODO Check if display() will result in null pointer due to returning potentially non-existent dateOfDeath.
- * TODO Javadocs for Class Description, Constructors, Validation Methods (but not JavaDoc bc private), and Accessors
- *
  *
  * @author Grace Jung
  * @author James Smith
@@ -17,6 +15,14 @@ public class Author
     private String genre;
 
     // CONSTRUCTORS
+    /**
+     * Constructs an Author object with a death date.
+     *
+     * @param dateOfBirth the author's date of birth
+     * @param dateOfDeath the author's death date (if applicable)
+     * @param name the author's name
+     * @param genre the author's genre
+     */
     public Author(final Date dateOfBirth,
                   final Date dateOfDeath,
                   final Name name,
@@ -27,42 +33,64 @@ public class Author
         if(validateGenre(genre)){
             this.genre = genre;
         } else {
-            throw new IllegalArgumentException("Genre not valid");
+            throw new IllegalArgumentException("Genre not valid.");
         }
     }
 
+    /**
+     * Constructs an Author object without a death date.
+     *
+     * @param dateOfBirth the author's date of birth
+     * @param name the author's name
+     * @param genre the author's genre
+     */
     public Author(final Date dateOfBirth,
                   final Name name,
                   final String genre)
     {
         super(dateOfBirth, name);
 
-        if(validateGenre(genre)){
+        if(!validateGenre(genre)){
             this.genre = genre;
         } else {
-            throw new IllegalArgumentException("Genre not valid");
+            throw new IllegalArgumentException("Genre not valid.");
         }
     }
 
     // VALIDATION METHODS
+    /*
+    Validates the author's genre and makes sure it's a string that is
+    not null, not empty, and shorter than 30 characters.
+     */
     private final boolean validateGenre(final String genre)
     {
-       if(genre == null     ||
-          genre.isBlank()   ||
-          (genre.length() >= 30))
-       {
-           return false;
-        } else {
-           return true;
-       }
+        boolean isGenre;
+        isGenre = genre == null     ||
+                  genre.isBlank()   ||
+                  (genre.length() >= 30);
+        return isGenre;
     }
 
     // ACCESSORS
+    /**
+     * Getter for the author's genre.
+     *
+     * @return the author's genre as a string
+     */
     public final String getGenre(){
         return genre;
     }
 
     // INHERITED METHODS
+    /**
+     * Overrides the display method in interface {@link Printable}.
+     * Returns the author's information:
+     * - Name
+     * - Genre
+     * - Date of Birth
+     * - Death Date (if applicable)
+     * as a string.
+     */
     @Override
     public void display(){
         StringBuilder sbAuthor;

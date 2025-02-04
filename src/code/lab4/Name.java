@@ -1,8 +1,6 @@
 package lab4;
 
 /**
- * TODO JavaDocs for Accessors
- *
  * Represents a name object with a first and last name.
  * Both first and last names cannot be null, blank, and must be less than 50 characters.
  *
@@ -51,16 +49,29 @@ public class Name implements Printable
     }
 
     // ACCESSORS
+
+    /**
+     * Getter for first name.
+     * @return
+     */
     public final String getFirstName()
     {
         return firstName;
     }
 
+    /**
+     * Getter for last name.
+     * @return
+     */
     public final String getLastName()
     {
         return lastName;
     }
 
+    /**
+     * Getter for full name.
+     * @return
+     */
     public final String getFullName()
     {
         return getFirstName() + " " + getLastName();
