@@ -73,9 +73,9 @@ public class Author
     private final boolean validateGenre(final String genre)
     {
         boolean isGenre;
-        isGenre = genre == null     ||
+        isGenre = !(genre == null     ||
                   genre.isBlank()   ||
-                  (genre.length() >= 30);
+                  (genre.length() >= 30));
         return isGenre;
     }
 
