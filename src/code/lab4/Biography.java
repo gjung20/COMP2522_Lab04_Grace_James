@@ -68,6 +68,7 @@ public class Biography
 
     // OTHER METHODS
     /**
+     * TODO compare the subjects instead of the two string names
      * Overrides the equals() method in the {@link Object} class.
      * Two biographies are equal if they are about the same subject.
      * Checks superclass (Book)'s author, pulls the Name object, and pulls full name as a String.
@@ -92,6 +93,14 @@ public class Biography
         } else {
             return false;
         }
+    }
+
+    /**
+     * TODO Override the hashcode() method.
+     */
+    @Override
+    public int hashCode(){
+        return super.hashCode();
     }
 
     /**

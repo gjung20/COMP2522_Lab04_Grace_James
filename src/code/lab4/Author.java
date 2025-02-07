@@ -24,6 +24,8 @@ public class Author
 
     // CONSTRUCTORS
     /**
+     * TODO instead of overloading the author class, consider calling the person class
+     *  because it's already overloaded for you
      * Constructs an Author object with a death date.
      *
      * @param dateOfBirth the author's date of birth

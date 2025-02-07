@@ -47,7 +47,7 @@ public class Main
 
         // Instantiating five person objects for biography
         Person robertMoses = new Person(new Date(1888, 12, 18), new Date(1981, 7, 29), new Name("Robert", "Moses"));
-        Person steveJobs = new Person(new Date(1955, 2, 24), new Date(2011, 10, 5),new Name("Steve", "Jobs"));
+        Person steveJobs = new Person(new Date(1955, 2, 24), new Name("Steve", "Jobs"));
         Person winstonChurchill = new Person(new Date(1874, 11, 30), new Date(1965, 1, 24), new Name("Winston", "Churchill"));
         Person alexanderHamilton = new Person(new Date(1755, 1, 11), new Date(1804, 7, 12), new Name("Alexander", "Hamilton"));
         Person albertEinstein = new Person(new Date(1879, 3, 14), new Date(1955, 4, 18), new Name("Albert", "Einstein"));
