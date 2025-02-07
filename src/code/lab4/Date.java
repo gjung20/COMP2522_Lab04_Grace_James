@@ -25,7 +25,7 @@ public class Date
 {
 
     // The earliest year a bank client can input as their birth year.
-    private static final int EARLIEST_BIRTH_YEAR = 1800;
+    private static final int EARLIEST_BIRTH_YEAR = 1700;
     // The current year.
     private static final int CURRENT_YEAR = 2025;
     // The minimum number a month can be.
@@ -375,5 +375,16 @@ public class Date
         sbDate.append(day);
 
         System.out.println(sbDate);
+    }
+
+    // OTHER METHODS
+    /**
+     * Method to convert default hashcode to human-readable string.
+     *
+     * @return to string as a String.
+     */
+    @Override
+    public String toString() {
+        return getYyyyMmDd();
     }
 }

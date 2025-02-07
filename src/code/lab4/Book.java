@@ -143,7 +143,7 @@ public class Book
     {
         StringBuilder sbBookDetails;
         sbBookDetails = new StringBuilder();
-        sbBookDetails.append("Title:");
+        sbBookDetails.append("Title: ");
         sbBookDetails.append(title);
         sbBookDetails.append('\n');
         sbBookDetails.append("Year Published: ");

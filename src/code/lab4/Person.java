@@ -191,4 +191,15 @@ public class Person
 
         return sbPersonBW.toString();
     }
+
+    // OTHER METHODS
+    /**
+     * Method to convert default hashcode to human-readable string.
+     *
+     * @return to string as a String.
+     */
+    @Override
+    public String toString() {
+        return getFullName();
+    }
 }

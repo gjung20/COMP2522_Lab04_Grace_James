@@ -1,7 +1,7 @@
 package lab4;
 
 /**
- * TODO Add Data and Print
+ *
  *
  * @author Grace Jung
  * @author James Smith
@@ -78,5 +78,54 @@ public class Main
         Autobiography malcolmXAuto = new Autobiography("Autobiography of Malcolm X", 1965,
                 new Author(new Date(1925, 5, 19), new Date(1965, 2, 21),
                 new Name("Malcolm", "X"), "Autobiography"));
+
+        // Comparing Books by Publication Year
+        System.out.println("\n--- Comparing Books by Publication Year (using equals()) ---");
+        System.out.println("1984 Publication Date: " + nineteenEightyFour.getYearPublished() +
+                           "\nTo Killing A Mockingbird Publication Date: " + toKillAMockingbird.getYearPublished() +
+                           "\n" + nineteenEightyFour.getTitle() + " vs. " + toKillAMockingbird.getTitle() + ": " +
+                           (Integer.valueOf(nineteenEightyFour.getYearPublished()).equals(toKillAMockingbird.getYearPublished())));
+
+        // Comparing Authors by Birthdate
+        System.out.println("\n--- Comparing Authors by Birthdate (using equals()) ---");
+        System.out.println("Jane Austen's birthdate: " + janeAusten.getDateOfBirth() +
+                           "\nF. Scott Fitzgerald's birthdate: " + fScottFitzgerald.getDateOfBirth() +
+                           "\nJane Austen vs. F. Scott Fitzgerald: " +
+                           janeAusten.getDateOfBirth().equals(fScottFitzgerald.getDateOfBirth()));
+
+        // Comparing Biographies by Subject
+        System.out.println("\n--- Comparing Biographies by Subject (using compareTo())---");
+        System.out.println("Albert Einstein's Biography's subject: " + einsteinBio.getSubject() +
+                           "\nSteve Job's Biography's subject: " + steveJobsBio.getSubject() +
+                           "\nEinstein vs. Steve Jobs: " + einsteinBio.getSubject().getName().getFullName().compareTo(steveJobsBio.getSubject().getName().getFullName()));
+
+        // Printing Book, Biography, and Autobiography Details
+        System.out.println("\n--- Book Details ---");
+        prideAndPrejudice.display();
+        System.out.println();
+        theGreatGatsby.display();
+        System.out.println();
+        mobyDick.display();
+
+        System.out.println("\n--- Biography Details ---");
+        steveJobsBio.display();
+        System.out.println();
+        churchillLife.display();
+        System.out.println();
+        hamiltonBio.display();
+
+        System.out.println("\n--- Autobiography Details ---");
+        diaryOfAnneFrank.display();
+        System.out.println();
+        angelouAuto.display();
+        System.out.println();
+        malcolmXAuto.display();
+
+        // Printing Book Titles & Author Names Backwards
+        System.out.println("\n--- Reversed Titles & Author Names ---");
+        System.out.println("[Book Title] 1984 Reversed: " + nineteenEightyFour.backwards());
+        System.out.println("[Book Title] Pride and Prejudice Reversed: " + prideAndPrejudice.backwards());
+        System.out.println("[Author Name] (Harper Lee) " + harperLee.backwards());
+        System.out.println("[Author Name] (Herman Melville) " + hermanMelville.backwards());
     }
 }
