@@ -174,7 +174,7 @@ public class Person
      * Prints the name title backwards
      */
     @Override
-    public void backwards() {
+    public String backwards() {
         StringBuilder sbPersonBW;
         sbPersonBW = new StringBuilder();
 
@@ -189,6 +189,6 @@ public class Person
             sbPersonBW.append(c);
         }
 
-        System.out.println(sbPersonBW);
+        return sbPersonBW.toString();
     }
 }

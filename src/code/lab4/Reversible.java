@@ -13,11 +13,8 @@ package lab4;
  */
 public interface Reversible
 {
-
-
     /**
+     * Prints the string representation of the object in reverse order.
      */
-     public void backwards();
-
-
+     public String backwards();
 }

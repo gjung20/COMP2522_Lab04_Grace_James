@@ -159,7 +159,7 @@ public class Book
      * Prints the title backwards as a String.
      */
     @Override
-    public void backwards()
+    public String backwards()
     {
         StringBuilder reversedTitle;
         char currentCharacter;
@@ -171,6 +171,6 @@ public class Book
             currentCharacter = getTitle().charAt(i);
             reversedTitle.insert(0, currentCharacter);
         }
-        System.out.println(reversedTitle.toString());
+        return reversedTitle.toString();
     }
 }
