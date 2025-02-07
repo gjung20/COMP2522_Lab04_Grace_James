@@ -1,7 +1,9 @@
 package lab4;
 
 /**
- *
+ * Main method which instantiates 5 book, person, autobiography and biography objects. The objects properties
+ * such as publication date and subject are compared to one another using equals() and comparesTo(). Other methods
+ * such as display() from Printable and backwards() from Reversible are used as well.
  *
  * @author Grace Jung
  * @author James Smith
